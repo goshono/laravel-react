@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    @vite('resources/css/app.css')
+    @vite('resources/sass/app.scss')
     
 </head>
 <body>
