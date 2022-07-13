@@ -13,4 +13,4 @@ import '../sass/app.scss'
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import './pages/Example';
+import './route';
