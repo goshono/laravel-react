@@ -11,7 +11,8 @@ function Example() {
                         <div className="card-header">Example Component!!</div>
 
                         <div className="card-body">Pages配下に移動したよ</div>
-                        <Button color="secondary" variant="contained">Homeに遷移ボタン</Button>
+                        <Button color="primary" variant="contained" href={`/`}>Homeに遷移ボタン</Button>
+                        <Button color="secondary" variant="contained" href={`/test`}>Testに遷移ボタン</Button>
                     </div>
                 </div>
             </div>
