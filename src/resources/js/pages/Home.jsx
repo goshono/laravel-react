@@ -26,7 +26,7 @@ function Home() {
             deleteBtn: <Button color="primary" variant="contained">完了</Button>,
         },
         {
-            name: 'シャイニー薊',
+            name: '',
             content: '肩トレ',
             editBtn: <Button color="secondary" variant="contained">編集</Button>,
             deleteBtn: <Button color="primary" variant="contained">完了</Button>,
