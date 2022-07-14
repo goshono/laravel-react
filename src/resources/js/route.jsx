@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 import Example from './pages/Example';
 import Home from './pages/Home'
-import Test from './pages/Test';
 
 function App() {
     return (
@@ -15,7 +14,6 @@ function App() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/example' element={<Example />} />
-                <Route path='/test' element={<Test name="たかし"/>} />
             </Routes>
         </div>
     );
