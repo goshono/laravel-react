@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Button, Card } from '@material-ui/core';
 import MainTable from '../components/MainTable';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
@@ -14,9 +15,34 @@ const useStyles = makeStyles((theme) => createStyles({
     },
 }));
 
+
+
 function Home() {
     
     const classes = useStyles();
+
+    // postsの状態を管理する
+    const [posts, setPosts] = useState([]);    
+
+    // 画面に到着したらgetPostsDataを呼ぶ
+    useEffect(() => {
+        getPostsData();
+    }, [])
+
+    // この中でgetPostsDataを呼ぶとaxiosによって繰り返しバックエンドと通信が行われてしまう。
+    const getPostsData = () => {
+        // バックエンドからpostsの一覧を取得する；
+        axios
+            .get('/api/posts')
+            .then(response => {
+                setPosts(response.data);
+                console.log(response.data);
+            })
+            .catch(() => {
+                console.log('通信失敗');
+            });  
+    }
+    
     let rows = [
         {
             name: 'なかやまきんに君',
