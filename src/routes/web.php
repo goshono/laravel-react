@@ -13,13 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::group(['middleware' => 'api'], function(){
-//     Route::get('posts', 'App\Http\Controllers\Api\PostsController@index');
-// });
-Route::middleware(['api'])->get(
-    'api/posts', 'App\Http\Controllers\Api\PostsController@index'
-);
-
 Route::get('{any}', function () {
     return view('app');
 })

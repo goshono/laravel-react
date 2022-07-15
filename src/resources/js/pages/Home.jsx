@@ -15,8 +15,6 @@ const useStyles = makeStyles((theme) => createStyles({
     },
 }));
 
-
-
 function Home() {
     
     const classes = useStyles();
@@ -43,21 +41,32 @@ function Home() {
             });  
     }
     
-    let rows = [
-        {
-            name: 'なかやまきんに君',
-            content: 'スクワット',
-            // ボタンも再利用性を考慮して切り出す
+    // let rows = [
+    //     {
+    //         name: 'なかやまきんに君',
+    //         content: 'スクワット',
+    //         // ボタンも再利用性を考慮して切り出す
+    //         editBtn: <Button color="secondary" variant="contained">編集</Button>,
+    //         deleteBtn: <Button color="primary" variant="contained">完了</Button>,
+    //     },
+    //     {
+    //         name: '',
+    //         content: '肩トレ',
+    //         editBtn: <Button color="secondary" variant="contained">編集</Button>,
+    //         deleteBtn: <Button color="primary" variant="contained">完了</Button>,
+    //     }
+    // ];
+
+    // let rows = response.data;
+    let rows = [];
+    posts.map(post =>
+        rows.push({
+            name: post.name,
+            content: post.content,
             editBtn: <Button color="secondary" variant="contained">編集</Button>,
             deleteBtn: <Button color="primary" variant="contained">完了</Button>,
-        },
-        {
-            name: '',
-            content: '肩トレ',
-            editBtn: <Button color="secondary" variant="contained">編集</Button>,
-            deleteBtn: <Button color="primary" variant="contained">完了</Button>,
-        }
-    ];
+        })
+    );
 
     return (
         <div className='container'>
